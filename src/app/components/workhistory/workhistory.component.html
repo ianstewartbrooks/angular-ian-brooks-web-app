@@ -1,0 +1,20 @@
+<!-- Work History -->
+<div class="container">
+  <h3>Work History</h3>
+  <p>Below, you can see a small excerpt from my CV and the various languages I have experience of using. For a more thorough
+    look at my work history please consider viewing my
+    <a href="https://www.linkedin.com/in/iansbrooks/" target="_blank">LinkedIn page</a>
+  </p>
+  <div *ngFor="let job of workHistory">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{job.jobTitle }} @ {{job.employer}} - {{job.from}} until {{job.to}}</h3>
+      </div>
+      <div class="panel-body">
+        <p *ngFor="let line of job.description">
+          {{line}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
